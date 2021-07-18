@@ -1,10 +1,10 @@
-### Hello World, and welcome to my Email Guesser application.
+# Hello World, and welcome to my Email Guesser application.
 
 There is two parts to this app, the frontend and the backend, reflected in two main project files - client and server.
 
 ### Frontend
 
-To start frontend service, `cd` into `client` folder and add `.env` file. You can see a `env.example` file with the required variable. In this case, it's no secret, if you check where backend server is running, that `API_URL=http://localhost:8080` in our `.env` file
+To start frontend service, `cd` into `client` folder.
 
 Install dependencies using:
 `yarn install`

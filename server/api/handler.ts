@@ -14,7 +14,7 @@ export const handler = async (req: IExtendedRequest, res: Response) => {
   const { dbClient } = req.diContext;
   const { name, company } = req.body;
 
-  let companySearchResult: Model | null;
+  let companySearchResult: any;
 
   try {
     companySearchResult = await getCompany(dbClient, company);
@@ -26,7 +26,7 @@ export const handler = async (req: IExtendedRequest, res: Response) => {
   let response: string;
 
   if (companySearchResult) {
-    const { emailFormat } = (companySearchResult as any).dataValues;
+    const { emailFormat } = companySearchResult.dataValues;
     response = formatFullNameEmail(name, company);
 
     if (emailFormat === EmailFormat.FullName) {

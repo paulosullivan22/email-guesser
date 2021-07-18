@@ -45,7 +45,7 @@ const Form: FC = () => {
 
     try {
       response = await axios.post(
-        `${process.env.API_URL}/handler`,
+        'http://localhost:8080/handler',
         { name: nameValue.toLowerCase(), company: companyValue.toLowerCase() },
         {
           headers: {
