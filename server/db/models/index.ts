@@ -1,0 +1,1 @@
+export { dbSetupCompaniesModel } from "./companies";
